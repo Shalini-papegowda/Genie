@@ -19,15 +19,7 @@ Each module is fully self-contained, scalable, and built using **SwiftUI + MVVM 
 
 ## 📐 Architecture Overview
 
-Presentation (SwiftUI Views)
-↓
-ViewModels (State & Logic)
-↓
-UseCases (Business Logic)
-↓
-Repositories (Abstractions)
-↓
-Services/Data (ARKit, CoreML, APIs, Storage)
+Presentation (SwiftUI Views) -> ViewModels (State & Logic) -> UseCases (Business Logic) -> Repositories (Abstractions) -> Services/Data (ARKit, CoreML, APIs, Storage)
 
 Each module is built as a self-contained folder or Swift Package to ensure scalability and clean separation of concerns.
 
