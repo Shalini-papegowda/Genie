@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Xcode
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+
+# Xcode user-specific scheme management
+*.xcodeproj/xcuserdata/*
+*.xcodeproj/project.xcworkspace/xcuserdata/*
+*.xcodeproj/xcuserdata/**/*.plist
+
+# Optionally exclude shared workspace settings if not shared
+*.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
