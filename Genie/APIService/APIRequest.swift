@@ -26,7 +26,7 @@ struct APIRequest<T: Decodable> {
         self.queryParameters = queryParameters
     }
     
-    func getURLRequest(from endpoint: APIEnvironment) throws -> URLRequest {
+    func getURLRequest(from endpoint: APIEnvironment, encoder: JSONEncoder = JSONEncoder()) throws -> URLRequest {
         guard let endpointURL = endpoint.getEndpointURL(path: path, queryParam: queryParameters) else {
             throw APIError.invalidURL
         }
@@ -39,7 +39,7 @@ struct APIRequest<T: Decodable> {
         
         do {
             if let body = body, method != .get {
-                request.httpBody = try JSONEncoder().encode(body)
+                request.httpBody = try encoder.encode(body)
                 if request.value(forHTTPHeaderField: "Content-Type") == nil {
                     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
                 }

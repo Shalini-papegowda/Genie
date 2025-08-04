@@ -24,7 +24,7 @@ struct WelcomeView: View {
             .padding(20)
             
             .safeAreaInset(edge: .bottom) {
-                    NavigationLink("Let's go!", destination: ContentView())
+                    NavigationLink("Let's go!", destination: DashboardView())
                         .buttonStyle(.borderedProminent)
                         .padding()
                         .background(Color(UIColor.systemBackground))
