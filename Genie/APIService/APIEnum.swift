@@ -34,7 +34,7 @@ enum APIError: Error {
     case unknown(Error)
     case encodingFailed(Error)
     case decodingFailed(Error)
-    case networkError(Error)
+    case networkError(statusCode: Int, data: Data?)
 }
 
 enum HTTPMethod: String {
